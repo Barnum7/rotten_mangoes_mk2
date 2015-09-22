@@ -3,7 +3,7 @@ class Movie < ActiveRecord::Base
 	validates :title,
 	presence: true
 
-	validate :director,
+	validates :director,
 	presence: true
 
 	validates :runtime_in_minutes,
