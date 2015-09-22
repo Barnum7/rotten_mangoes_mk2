@@ -1,5 +1,15 @@
 <h2>Submit a movie!</h2>
 <%= form_for @movie do |f| %>
+	<% if @movie.errors.any? %>
+		<div>
+			<%= pluralize(@movies.errors.count, "error") %> prevented this movie from being submitted:
+			<ul>
+				<%@movie.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 	<div>
 		<%= f.label :title %><br>
 		<%= f.text_field :title %>
