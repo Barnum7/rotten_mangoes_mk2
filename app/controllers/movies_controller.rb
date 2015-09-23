@@ -20,7 +20,7 @@ class MoviesController < ApplicationController
     if @movie.update_attributes(movie_params)
       redirect_to movies_path, notice: "#{@movie.title} was updated successfully"
     else
-      render :show, notice: "Oops! Did you forget anything?"
+      render :show
     end
   end
 
@@ -36,7 +36,7 @@ class MoviesController < ApplicationController
 
   def destroy
   	@movie.destroy
-  	redirect_to movies_path, notice: "#{@movie.title} was submitted successfully!"
+  	redirect_to movies_path, notice: "#{@movie.title} was destroyed successfully!"
   end
 
   protected
