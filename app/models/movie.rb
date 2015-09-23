@@ -20,6 +20,14 @@ class Movie < ActiveRecord::Base
 	validates :release_date,
 	presence: true
 
+	def review_average
+		if reviews.size > 0
+			reviews.sum(:rating_out_of_ten)/reviews.size
+		else
+			"This movie has not been rated"
+		end
+	end
+
 	# validate :release_date_is_in_the_future
 
 	protected
