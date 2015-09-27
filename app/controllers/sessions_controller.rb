@@ -13,7 +13,6 @@ class SessionsController < ApplicationController
   		flash.now[:alert] = "Log in failed..."
   		render :new
   	end
-
   end
 
   def destroy

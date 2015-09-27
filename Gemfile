@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7' 
 # For File Uploads
 gem 'carrierwave', '~> 0.10.0'
+#For Front End Design
+gem 'skeleton_rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
